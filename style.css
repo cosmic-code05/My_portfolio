@@ -1,15 +1,75 @@
-body {
-  background-color: rgb(112, 1, 24);
-  color: rgb(237, 220, 148);
-  font-family: sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+  background-color:  #0a0a0f;
+  color: #e8e8f0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/*MESH GRADIENT */
+body::before {
+  content: '';
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(167,139,250,0.15) 0%, transparent 70%);
+  top: -200px;
+  left: -200px;
+  z-index: 0;
+  pointer-events: none;
+  animation: drift1 10s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(244,114,182,0.1) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  z-index: 0;
+  pointer-events: none;
+  animation: drift2 12s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(80px, 60px); }
+}
+
+@keyframes drift2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-60px, -80px); }
+}
+
+
 nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid gray;
+  backdrop-filter: blur(20px);
+  background: rgba(10,10,15,0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px;
 }
 
 nav a {
@@ -55,6 +115,13 @@ nav a {
   border: 1px solid rgba(237, 220, 148, 0.3);
 }
 
+.skill-card:hover {
+  border-color: #a78bfa;
+  transform: translateY(-4px);
+  background: rgba(167,139,250,0.08);
+  transition: all 0.3s;
+}
+
 #projects {
   padding: 4rem 3rem;
 }
@@ -87,6 +154,13 @@ nav a {
   display: inline-block;
 }
 
+.project-card:hover {
+  border-color: #f472b6;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
 #contact {
   padding: 4rem 3rem;
   text-align: center;
@@ -94,11 +168,23 @@ nav a {
 
 #contact h2 {
   margin-bottom: 1rem;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 #contact p {
   color: rgb(237, 220, 148);
   margin-bottom: 2rem;
+  animation: glow 2s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(167,139,250,0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(167,139,250,0.9), 0 0 40px rgba(244,114,182,0.5);
+  }
 }
 
 #contact a {
@@ -112,8 +198,10 @@ nav a {
 }
 
 #contact a:hover {
-  background-color: rgb(237, 220, 148);
-  color: rgb(112, 1, 24);
+  background-color: rgb(247, 229, 151);
+  color: rgb(171, 3, 36);
+  transform: translateX(-4px);
+  transition: all 0.3s;
 }
 
 .light-mode {
@@ -121,8 +209,28 @@ nav a {
   color: rgb(112, 1, 24);
 }
 
+.light-mode #contact a:hover,
+.light-mode #hero a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(167,139,250,0.3),
+    rgba(244,114,182,0.3),
+    rgba(56,189,248,0.3),
+    rgba(167,139,250,0.3)
+  );
+  background-size: 300% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-color: #a78bfa;
+  color: #1a1a2e;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
 .light-mode nav {
-  background-color: #fff5e6;
+  background-color: #dfa5d2;
 }
 
 .light-mode .skill-card {
@@ -146,10 +254,23 @@ nav a {
 
 #themeToggle {
   background: transparent;
-  color: rgb(237, 220, 148);
-  border: 1px solid rgb(237, 220, 148);
+  color: rgb(230, 218, 216);
+  border: 1px solid rgb(87, 15, 3);
   padding: 0.4rem 1rem;
   border-radius: 100px;
   cursor: pointer;
   margin-left: 1.5rem;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+.skill-card {
+  animation: bounce 1s infinite alternate;
 }
