@@ -1,0 +1,155 @@
+body {
+  background-color: rgb(112, 1, 24);
+  color: rgb(237, 220, 148);
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid gray;
+}
+
+nav a {
+  color: rgb(237, 220, 148);
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+#hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+#hero a {
+  color: rgb(237, 220, 148);
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+#skills {
+  padding: 4rem 3rem;
+}
+
+#skills h2 {
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(237, 220, 148, 0.3);
+}
+
+#projects {
+  padding: 4rem 3rem;
+}
+
+#projects h2 {
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(237, 220, 148, 0.3);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: rgb(237, 220, 148);
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+#contact {
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  color: rgb(237, 220, 148);
+  margin-bottom: 2rem;
+}
+
+#contact a {
+  color: rgb(237, 220, 148);
+  text-decoration: none;
+  border: 1px solid rgb(237, 220, 148);
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+#contact a:hover {
+  background-color: rgb(237, 220, 148);
+  color: rgb(112, 1, 24);
+}
+
+.light-mode {
+  background-color: #fff5e6;
+  color: rgb(112, 1, 24);
+}
+
+.light-mode nav {
+  background-color: #fff5e6;
+}
+
+.light-mode .skill-card {
+  background-color: rgba(112, 1, 24, 0.1);
+  border-color: rgba(112, 1, 24, 0.3);
+}
+
+.light-mode .project-card {
+  background-color: rgba(112, 1, 24, 0.1);
+  border-color: rgba(112, 1, 24, 0.3);
+}
+
+.light-mode nav a {
+  color: rgb(112, 1, 24);
+}
+
+.light-mode #contact a {
+  color: rgb(112, 1, 24);
+  border-color: rgb(112, 1, 24);
+}
+
+#themeToggle {
+  background: transparent;
+  color: rgb(237, 220, 148);
+  border: 1px solid rgb(237, 220, 148);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
