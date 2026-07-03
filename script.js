@@ -10,7 +10,7 @@ toggle.addEventListener('click', function() {
   }
 });
 
-const words = ['Frontend Developer.', 'UI Enthusiast.', 'Problem Solver.'];
+const words = ['Frontend Developer.', 'UI Enthusiast.', 'Problem Solver.', 'ML Enthusiast.'];
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
