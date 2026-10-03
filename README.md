@@ -25,5 +25,3 @@ This repository represents the **beginning of my journey into building things on
 * Adding interactivity using JavaScript
 * Working with Git and GitHub
 * Building and improving a project through iterations
-
-More improvements and projects to come.
