@@ -10,6 +10,8 @@ This was the **first ever website I built from scratch**, so this project is esp
 * CSS
 * JavaScript
 
+
+
 ## About the Project
 
 I built this portfolio while learning the fundamentals of web development. From designing the layout and styling the pages to adding interactive elements with JavaScript, everything was built as part of my learning process.
