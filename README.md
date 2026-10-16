@@ -20,7 +20,6 @@ This repository represents the **beginning of my journey into building things on
 
 ## What I Learned
 
-
 * Structuring webpages with HTML
 * Styling and responsive design with CSS
 * Adding interactivity using JavaScript
